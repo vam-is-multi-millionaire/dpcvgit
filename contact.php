@@ -37,9 +37,9 @@
             <div class="card">
                 <div class="card-body text-dark">
                     <h2 class="card-title h3 mb-4">Contact Information</h2>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Education Lane, Knowledge City, 54321</p>
-                    <p><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</p>
-                    <p><i class="fas fa-envelope me-2"></i> contact@dpcv.edu</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Itram 07, Surkhet, Nepal</p>
+                    <p><i class="fas fa-phone me-2"></i> +977 9769955973</p>
+                    <p><i class="fas fa-envelope me-2"></i> vamofficial00@gmail.com</p>
                     
                     <hr>
 
