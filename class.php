@@ -32,7 +32,7 @@ $uploads = $stmt_uploads->fetchAll();
 ?>
 
 <div class="container py-5">
-    <div class="class-header p-4 p-md-5 mb-4 bg-light rounded-3 text-center text-md-start">
+    <div class="class-header p-4 p-md-5 mb-4 theme-aware-bg rounded-3 text-center text-md-start">
         <h1 class="display-5 fw-bold"><?php echo htmlspecialchars($class['name']); ?></h1>
         <p class="fs-4"><?php echo htmlspecialchars($class['description']); ?></p>
     </div>

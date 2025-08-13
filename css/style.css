@@ -207,6 +207,16 @@ body.dark-mode .list-group-item-action:hover {
     background-color: #2a2a2a;
 }
 
+.theme-aware-bg {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+body.dark-mode .theme-aware-bg {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+}
+
 /* --- Responsive Design --- */
 @media (max-width: 991.98px) {
     .navbar-collapse {
