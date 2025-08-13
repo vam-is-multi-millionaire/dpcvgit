@@ -61,5 +61,5 @@ if (!isset($_SESSION['admin_logged_in'])) {
             </div>
         </nav>
 
-        <div class="container-fluid p-4">
+        <div class="container-fluid px-4">
 
