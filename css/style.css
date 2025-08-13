@@ -1,0 +1,256 @@
+
+
+/* --- Global Styles --- */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --light-bg: #f8f9fa;
+    --dark-bg: #121212;
+    --light-text: #212529;
+    --dark-text: #e0e0e0;
+    --light-card-bg: #ffffff;
+    --dark-card-bg: #1e1e1e;
+    --light-border: #dee2e6;
+    --dark-border: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--light-bg);
+    color: var(--light-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+    flex: 1;
+}
+
+/* --- Header --- */
+.header {
+    background-color: var(--light-card-bg);
+    border-bottom: 1px solid var(--light-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* --- Navbar --- */
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+}
+
+/* --- Hero Section --- */
+#hero {
+    height: 60vh;
+    background: url('../images/about-us.jpg') no-repeat center center/cover;
+    position: relative;
+    color: #ffffff;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Upload Cards --- */
+.upload-card {
+    border: 1px solid var(--light-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.upload-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+.card-img-top-container {
+    height: 200px;
+    overflow: hidden;
+    background-color: var(--light-bg);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pdf-preview {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.file-icon-preview {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-bg);
+}
+
+.file-icon-large {
+    width: 80px;
+    height: 80px;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: var(--light-card-bg);
+    border-top: 1px solid var(--light-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* --- Animations --- */
+.upload-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered animation for cards */
+.col:nth-child(1) .upload-card { animation-delay: 0.1s; }
+.col:nth-child(2) .upload-card { animation-delay: 0.2s; }
+.col:nth-child(3) .upload-card { animation-delay: 0.3s; }
+.col:nth-child(4) .upload-card { animation-delay: 0.4s; }
+.col:nth-child(5) .upload-card { animation-delay: 0.5s; }
+.col:nth-child(6) .upload-card { animation-delay: 0.6s; }
+.col:nth-child(7) .upload-card { animation-delay: 0.7s; }
+.col:nth-child(8) .upload-card { animation-delay: 0.8s; }
+
+/* --- Theme (Dark/Light Mode) --- */
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.dark-mode .header {
+    background-color: var(--dark-card-bg);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+body.dark-mode .navbar-dark .navbar-brand,
+body.dark-mode .navbar-dark .nav-link {
+    color: var(--dark-text);
+}
+
+body.dark-mode .card {
+    background-color: var(--dark-card-bg);
+    border-color: var(--dark-border);
+}
+
+body.dark-mode .card-title,
+body.dark-mode .text-dark {
+    color: var(--dark-text) !important;
+}
+
+body.dark-mode .text-muted {
+    color: #aaa !important;
+}
+
+body.dark-mode .form-control {
+    background-color: #2a2a2a;
+    color: var(--dark-text);
+    border-color: var(--dark-border);
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #888;
+}
+
+body.dark-mode .card-img-top-container,
+body.dark-mode .file-icon-preview {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode .site-footer {
+    background-color: var(--dark-card-bg);
+    border-top: 1px solid var(--dark-border);
+    color: var(--dark-text);
+}
+
+body.dark-mode .list-group-item {
+    background-color: var(--dark-card-bg);
+    border-color: var(--dark-border);
+    color: var(--dark-text);
+}
+
+body.dark-mode .list-group-item-action:hover {
+    background-color: #2a2a2a;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: var(--light-card-bg);
+        padding: 1rem;
+        border-radius: 0.25rem;
+        margin-top: 1rem;
+        border: 1px solid var(--light-border);
+    }
+
+    body.dark-mode .navbar-collapse {
+        background-color: var(--dark-card-bg);
+        border-color: var(--dark-border);
+    }
+
+    .navbar-nav {
+        align-items: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #hero {
+        height: 50vh;
+        text-align: center;
+    }
+    .display-3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    #hero .d-flex {
+        flex-direction: column;
+    }
+
+    #hero .form-control {
+        width: 100% !important;
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+

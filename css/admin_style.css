@@ -1,0 +1,90 @@
+/* --- Admin General --- */
+#wrapper {
+    display: flex;
+    overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+    width: 15rem;
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin .25s ease-out;
+    background-color: #343a40; /* bg-dark */
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#page-content-wrapper {
+    flex: 1;
+    min-width: 0;
+    transition: margin .25s ease-out;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+#menu-toggle {
+    display: block;
+}
+
+/* Desktop Styles */
+@media (min-width: 992px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        margin-left: 0; /* No margin needed as flexbox handles it */
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0; /* Toggling has no effect on desktop */
+    }
+
+    #menu-toggle {
+        display: none; /* Hide hamburger on desktop */
+    }
+}
+
+/* Mobile/Tablet Styles */
+@media (max-width: 991.98px) {
+    #page-content-wrapper {
+        min-width: 100vw; /* Ensure content takes full width */
+    }
+    #wrapper.toggled #page-content-wrapper {
+        margin-left: 15rem; /* Push content when sidebar is open */
+    }
+}
+
+
+/* --- Admin Cards --- */
+.dashboard-card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    background-color: #fff;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    color: inherit;
+}
+
+.dashboard-card .card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #0d6efd;
+}
